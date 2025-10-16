@@ -22,4 +22,7 @@ models:
     staging:
       +materialized: view
     marts:
-      +materialized: table
+      # +materialized: table
+      +materialized: dynamic_table
+      +target_lag: '1 hours'
+      +snowflake_warehouse: 'TASTY_BYTES_DBT_WH'
