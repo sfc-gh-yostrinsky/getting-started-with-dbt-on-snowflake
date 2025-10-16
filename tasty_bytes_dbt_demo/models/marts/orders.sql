@@ -1,3 +1,8 @@
+
+{{ config(
+    refresh_mode="INCREMENTAL",
+) }}
+
 SELECT 
     oh.order_id,
     oh.truck_id,
